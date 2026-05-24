@@ -15,45 +15,6 @@ doctype_list_js = {
     "Visitor Entry": "public/js/visitor_entry_list.js",
 }
 
-# ── Fixtures (exported on bench export-fixtures) ───────────
-fixtures = [
-    {
-        "doctype": "Role",
-        "filters": [["name", "in", [
-            "Security Guard", "Receptionist", "Visitor Approver"
-        ]]]
-    },
-    {
-        "doctype": "Workflow",
-        "filters": [["document_type", "=", "Visitor Entry"]]
-    },
-    {
-        "doctype": "Notification",
-        "filters": [["document_type", "=", "Visitor Entry"]]
-    },
-    {
-        "doctype": "Print Format",
-        "filters": [["doc_type", "=", "Visitor Entry"]]
-    },
-    {
-        "doctype": "Number Card",
-        "filters": [["name", "in", [
-            "Visitors Inside Now",
-            "Pending Approvals",
-            "Approved Today",
-            "Checked Out Today",
-        ]]]
-    },
-    {
-        "doctype": "Workspace",
-        "filters": [["name", "=", "Visitor Management"]]
-    },
-    {
-        "doctype": "Report",
-        "filters": [["module", "=", "Visitor Management"]]
-    },
-]
-
 # ── Scheduled tasks ────────────────────────────────────────
 scheduler_events = {
     "hourly": [
@@ -62,16 +23,4 @@ scheduler_events = {
     "daily_long": [
         "visitor_management.visitor_management.visitor_management.doctype.visitor_entry.visitor_entry.send_daily_summary"
     ],
-}
-
-# ── Jinja helpers ──────────────────────────────────────────
-jinja = {
-    "methods": [
-        "visitor_management.visitor_management.visitor_management.utils.get_qr_code_base64"
-    ]
-}
-
-# ── Employee dashboard link ────────────────────────────────
-override_doctype_dashboards = {
-    "Employee": "visitor_management.visitor_management.visitor_management.utils.get_employee_dashboard_data"
 }
