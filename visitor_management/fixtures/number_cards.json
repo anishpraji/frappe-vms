@@ -1,0 +1,50 @@
+[
+  {
+    "doctype": "Number Card",
+    "name": "Visitors Inside Now",
+    "label": "Visitors Inside Now",
+    "document_type": "Visitor Entry",
+    "function": "Count",
+    "filters_json": "[{\"fieldname\":\"status\",\"filter_type\":\"equals\",\"value\":\"Checked In\"}]",
+    "color": "#2490EF",
+    "stats_time_interval": "Daily",
+    "show_percentage_stats": 0,
+    "is_public": 1
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Pending Approvals",
+    "label": "Pending Approvals",
+    "document_type": "Visitor Entry",
+    "function": "Count",
+    "filters_json": "[{\"fieldname\":\"status\",\"filter_type\":\"equals\",\"value\":\"Pending Approval\"}]",
+    "color": "#F39C12",
+    "stats_time_interval": "Daily",
+    "show_percentage_stats": 0,
+    "is_public": 1
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Approved Today",
+    "label": "Approved Today",
+    "document_type": "Visitor Entry",
+    "function": "Count",
+    "filters_json": "[{\"fieldname\":\"status\",\"filter_type\":\"equals\",\"value\":\"Approved\"},{\"fieldname\":\"approval_timestamp\",\"filter_type\":\"time_interval\",\"value\":\"Today\"}]",
+    "color": "#28A745",
+    "stats_time_interval": "Daily",
+    "show_percentage_stats": 1,
+    "is_public": 1
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Checked Out Today",
+    "label": "Checked Out Today",
+    "document_type": "Visitor Entry",
+    "function": "Count",
+    "filters_json": "[{\"fieldname\":\"status\",\"filter_type\":\"equals\",\"value\":\"Checked Out\"},{\"fieldname\":\"check_out_time\",\"filter_type\":\"time_interval\",\"value\":\"Today\"}]",
+    "color": "#6C3BD5",
+    "stats_time_interval": "Daily",
+    "show_percentage_stats": 0,
+    "is_public": 1
+  }
+]
