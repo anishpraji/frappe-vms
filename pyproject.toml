@@ -13,8 +13,14 @@ requires-python = ">=3.10"
 license = {text = "MIT"}
 version = "1.0.0"
 
-dependencies = [
-    "frappe",
+# Do NOT list frappe or erpnext here.
+# They are already installed in the bench environment.
+# Listing frappe causes uv to resolve its full dependency tree
+# which conflicts with pypika's URL dependency in frappe v14+.
+dependencies = []
+
+[project.optional-dependencies]
+qr = [
     "qrcode[pil]",
     "Pillow",
 ]
