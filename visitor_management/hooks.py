@@ -57,21 +57,21 @@ fixtures = [
 # ── Scheduled tasks ────────────────────────────────────────
 scheduler_events = {
     "hourly": [
-        "visitor_management.visitor_management.doctype.visitor_entry.visitor_entry.expire_overdue_visitors"
+        "visitor_management.visitor_management.visitor_management.doctype.visitor_entry.visitor_entry.expire_overdue_visitors"
     ],
     "daily_long": [
-        "visitor_management.visitor_management.doctype.visitor_entry.visitor_entry.send_daily_summary"
+        "visitor_management.visitor_management.visitor_management.doctype.visitor_entry.visitor_entry.send_daily_summary"
     ],
 }
 
 # ── Jinja helpers ──────────────────────────────────────────
 jinja = {
     "methods": [
-        "visitor_management.visitor_management.utils.get_qr_code_base64"
+        "visitor_management.visitor_management.visitor_management.utils.get_qr_code_base64"
     ]
 }
 
 # ── Employee dashboard link ────────────────────────────────
 override_doctype_dashboards = {
-    "Employee": "visitor_management.visitor_management.utils.get_employee_dashboard_data"
+    "Employee": "visitor_management.visitor_management.visitor_management.utils.get_employee_dashboard_data"
 }
