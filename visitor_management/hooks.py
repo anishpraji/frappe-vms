@@ -15,6 +15,14 @@ doctype_list_js = {
     "Visitor Entry": "public/js/visitor_entry_list.js",
 }
 
+# ── Fixtures — synced on bench migrate ────────────────────
+fixtures = [
+    {
+        "doctype": "Print Format",
+        "filters": [["name", "=", "Visitor Pass"]]
+    },
+]
+
 # ── Scheduled tasks ────────────────────────────────────────
 scheduler_events = {
     "hourly": [

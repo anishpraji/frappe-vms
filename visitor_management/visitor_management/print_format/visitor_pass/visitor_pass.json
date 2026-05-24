@@ -1,0 +1,20 @@
+{
+ "align_labels_right": 0,
+ "creation": "2024-01-01 00:00:00",
+ "custom_format": 1,
+ "default_print_language": "en",
+ "disabled": 0,
+ "doc_type": "Visitor Entry",
+ "doctype": "Print Format",
+ "font": "Default",
+ "line_breaks": 0,
+ "margin_bottom": 0,
+ "margin_left": 0,
+ "margin_right": 0,
+ "margin_top": 0,
+ "module": "Visitor Management",
+ "name": "Visitor Pass",
+ "print_format_type": "Jinja",
+ "show_section_headings": 0,
+ "standard": "Yes"
+}
