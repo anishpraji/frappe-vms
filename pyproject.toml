@@ -13,17 +13,10 @@ requires-python = ">=3.10"
 license = {text = "MIT"}
 version = "1.0.0"
 
-# Do NOT list frappe or erpnext here.
-# They are already installed in the bench environment.
-# Listing frappe causes uv to resolve its full dependency tree
-# which conflicts with pypika's URL dependency in frappe v14+.
+# Do NOT list frappe or erpnext here — they live in the bench env.
+# Extra packages are declared in requirements.txt which bench
+# installs automatically during get-app and install-app.
 dependencies = []
-
-[project.optional-dependencies]
-qr = [
-    "qrcode[pil]",
-    "Pillow",
-]
 
 [project.urls]
 Homepage = "https://github.com/yourusername/visitor_management"
