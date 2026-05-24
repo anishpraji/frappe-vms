@@ -1,0 +1,31 @@
+{
+ "autoname": "Visitor Settings",
+ "creation": "2024-01-01 00:00:00",
+ "doctype": "DocType",
+ "issingle": 1,
+ "engine": "InnoDB",
+ "field_order": ["section_general","company","default_gate","approval_timeout_minutes","col_break1","auto_expire_after_hours","require_nda","require_safety_induction","section_pass","pass_validity_hours","pass_header_text","col_break2","company_logo","security_instructions"],
+ "fields": [
+  {"fieldname":"section_general","fieldtype":"Section Break","label":"General Settings"},
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company"},
+  {"fieldname":"default_gate","fieldtype":"Select","label":"Default Entry Gate","options":"Gate 1 (Main)\nGate 2 (Rear)\nGate 3 (Vendor)\nGate 4 (Emergency)"},
+  {"fieldname":"approval_timeout_minutes","fieldtype":"Int","label":"Approval Timeout (Minutes)","default":"15"},
+  {"fieldname":"col_break1","fieldtype":"Column Break"},
+  {"fieldname":"auto_expire_after_hours","fieldtype":"Int","label":"Auto-Expire After (Hours)","default":"2"},
+  {"fieldname":"require_nda","fieldtype":"Check","label":"Require NDA Acknowledgment"},
+  {"fieldname":"require_safety_induction","fieldtype":"Check","label":"Require Safety Induction"},
+  {"fieldname":"section_pass","fieldtype":"Section Break","label":"Visitor Pass Settings"},
+  {"fieldname":"pass_validity_hours","fieldtype":"Int","label":"Pass Validity (Hours)","default":"8"},
+  {"fieldname":"pass_header_text","fieldtype":"Data","label":"Pass Header Text","default":"VISITOR GATE PASS"},
+  {"fieldname":"col_break2","fieldtype":"Column Break"},
+  {"fieldname":"company_logo","fieldtype":"Attach Image","label":"Company Logo"},
+  {"fieldname":"security_instructions","fieldtype":"Text","label":"Security Instructions (printed on pass)","default":"1. Wear visitor badge at all times\n2. Do not enter restricted areas\n3. No photography without permission\n4. Report to security on departure"}
+ ],
+ "module": "Visitor Management",
+ "name": "Visitor Settings",
+ "permissions": [
+  {"read":1,"role":"Security Guard"},
+  {"read":1,"role":"Receptionist"},
+  {"create":1,"read":1,"role":"System Manager","write":1}
+ ]
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "visitor_management"
+authors = [
+    {name = "Your Company", email = "admin@yourcompany.com"}
+]
+description = "Complete Visitor Management System for ERPNext / Frappe"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+version = "1.0.0"
+
+dependencies = [
+    "frappe",
+    "qrcode[pil]",
+    "Pillow",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/visitor_management"
+
+[tool.flit.module]
+name = "visitor_management"

@@ -1,0 +1,37 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["naming_series","is_active","visitor_name","mobile_number","col_break1","company_name","email_id","section_reason","reason","blacklisted_by","col_break2","blacklist_date","blacklist_duration","expiry_date","section_ref","visitor_entry_reference","notes"],
+ "fields": [
+  {"fieldname":"naming_series","fieldtype":"Select","label":"Series","options":"BL-.YYYY.-.####"},
+  {"fieldname":"is_active","fieldtype":"Check","label":"Is Active","default":"1","in_list_view":1},
+  {"fieldname":"visitor_name","fieldtype":"Data","label":"Visitor Name","reqd":1,"in_list_view":1,"bold":1,"search_index":1},
+  {"fieldname":"mobile_number","fieldtype":"Data","label":"Mobile Number","options":"Phone","reqd":1,"in_list_view":1,"search_index":1},
+  {"fieldname":"col_break1","fieldtype":"Column Break"},
+  {"fieldname":"company_name","fieldtype":"Data","label":"Company"},
+  {"fieldname":"email_id","fieldtype":"Data","label":"Email","options":"Email"},
+  {"fieldname":"section_reason","fieldtype":"Section Break","label":"Blacklist Details"},
+  {"fieldname":"reason","fieldtype":"Small Text","label":"Reason for Blacklisting","reqd":1},
+  {"fieldname":"blacklisted_by","fieldtype":"Link","label":"Blacklisted By","options":"User","read_only":1},
+  {"fieldname":"col_break2","fieldtype":"Column Break"},
+  {"fieldname":"blacklist_date","fieldtype":"Date","label":"Blacklist Date","default":"Today","read_only":1},
+  {"fieldname":"blacklist_duration","fieldtype":"Select","label":"Duration","options":"Permanent\n3 Months\n6 Months\n1 Year"},
+  {"fieldname":"expiry_date","fieldtype":"Date","label":"Expiry Date"},
+  {"fieldname":"section_ref","fieldtype":"Section Break","label":"Reference","collapsible":1},
+  {"fieldname":"visitor_entry_reference","fieldtype":"Link","label":"Visitor Entry Reference","options":"Visitor Entry"},
+  {"fieldname":"notes","fieldtype":"Text","label":"Additional Notes"}
+ ],
+ "module": "Visitor Management",
+ "name": "Visitor Blacklist",
+ "permissions": [
+  {"create":0,"delete":0,"read":1,"role":"Security Guard","write":0},
+  {"create":1,"delete":0,"read":1,"role":"HR Manager","write":1},
+  {"create":1,"delete":1,"read":1,"role":"System Manager","write":1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "visitor_name",
+ "track_changes": 1
+}

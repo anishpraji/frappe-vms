@@ -1,0 +1,2 @@
+include pyproject.toml
+recursive-include visitor_management *.json *.js *.css *.html *.py *.md *.txt *.png *.svg

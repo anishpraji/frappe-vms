@@ -5,27 +5,8 @@
  "disabled": 0,
  "doctype": "Report",
  "filters": [
-  {
-   "default": "",
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From Date",
-   "reqd": 0
-  },
-  {
-   "default": "",
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To Date",
-   "reqd": 0
-  },
-  {
-   "fieldname": "department",
-   "fieldtype": "Link",
-   "label": "Department",
-   "options": "Department",
-   "reqd": 0
-  }
+  {"default": "","fieldname": "from_date","fieldtype": "Date","label": "From Date","reqd": 0},
+  {"default": "","fieldname": "to_date","fieldtype": "Date","label": "To Date","reqd": 0}
  ],
  "is_standard": "Yes",
  "module": "Visitor Management",
@@ -34,9 +15,6 @@
  "report_name": "Daily Visitor Summary",
  "report_type": "Script Report",
  "roles": [
-  {"role": "Security Guard"},
-  {"role": "Receptionist"},
-  {"role": "HR Manager"},
-  {"role": "System Manager"}
+  {"role": "Security Guard"},{"role": "Receptionist"},{"role": "HR Manager"},{"role": "System Manager"}
  ]
 }

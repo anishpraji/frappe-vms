@@ -2,39 +2,26 @@ app_name        = "visitor_management"
 app_title       = "Visitor Management"
 app_publisher   = "Your Company"
 app_description = "Complete Visitor Management System for Manufacturing Factories"
-app_icon        = "octicon octicon-person"
-app_color       = "#2490EF"
 app_email       = "admin@yourcompany.com"
 app_license     = "MIT"
 app_version     = "1.0.0"
 
-# ── Asset bundles ──────────────────────────────────────────
-# These are loaded by ERPNext's own asset pipeline.
-# ERPNext applies its own CSS; we only ship behavioural JS.
-
-app_include_js = [
-    "visitor_management/public/js/visitor_entry.js",
-    "visitor_management/public/js/visitor_entry_list.js",
-]
-
-# No custom CSS — we rely entirely on ERPNext's design system
-app_include_css = []
-
-# ── DocType JS overrides ───────────────────────────────────
-# Maps each DocType to its client controller (alternative to app_include_js)
+# ── Asset registration ─────────────────────────────────────
 doctype_js = {
-    "Visitor Entry": "visitor_management/public/js/visitor_entry.js",
+    "Visitor Entry": "public/js/visitor_entry.js",
 }
 
 doctype_list_js = {
-    "Visitor Entry": "visitor_management/public/js/visitor_entry_list.js",
+    "Visitor Entry": "public/js/visitor_entry_list.js",
 }
 
-# ── Fixtures ───────────────────────────────────────────────
+# ── Fixtures (exported on bench export-fixtures) ───────────
 fixtures = [
     {
         "doctype": "Role",
-        "filters": [["name", "in", ["Security Guard", "Receptionist", "Visitor Approver"]]]
+        "filters": [["name", "in", [
+            "Security Guard", "Receptionist", "Visitor Approver"
+        ]]]
     },
     {
         "doctype": "Workflow",
@@ -51,8 +38,10 @@ fixtures = [
     {
         "doctype": "Number Card",
         "filters": [["name", "in", [
-            "Visitors Inside Now", "Pending Approvals",
-            "Approved Today", "Checked Out Today"
+            "Visitors Inside Now",
+            "Pending Approvals",
+            "Approved Today",
+            "Checked Out Today",
         ]]]
     },
     {
@@ -82,7 +71,7 @@ jinja = {
     ]
 }
 
-# ── Override Employee dashboard ────────────────────────────
+# ── Employee dashboard link ────────────────────────────────
 override_doctype_dashboards = {
     "Employee": "visitor_management.visitor_management.utils.get_employee_dashboard_data"
 }
